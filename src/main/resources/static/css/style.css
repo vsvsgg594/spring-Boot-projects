@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main-conatiner{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid red; */
+}
+.header-container{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid blue; */
+
+}
+.upper-header-container{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 2px solid green; */
+    background-color: rgb(21, 173, 233);
+    color: #fff;
+}
+.left-mail-section{
+    margin-left: 10px;
+    /* text-transform: capitalize; */
+}
+.right-icon-section{
+    margin-left: 10px;
+    padding: 2px;
+ 
+}
+.lower-header-conatiner{
+    width: 100%;
+    height: 74%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.left-lower-header-conatiner{
+    margin:10px;
+}
+.left-lower-header-conatiner p{
+    color:rgb(7, 75, 75);
+}
+.right-lower-menu-section{
+    margin: 25px;
+}
+.right-lower-menu-section a{
+  padding: 15px;
+  text-decoration: none;
+  font-size: 20px;
+  color:rgb(7, 75, 75);
+  text-transform: capitalize;
+
+}
+.right-lower-menu-section a:hover{
+    color: red;
+}
+.home-section-container{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to left,rgba(12, 43, 109, 0.5),rgba(0, 0, 0, 0.514)),url('/images/background.jpg');
+    background-position: center;
+    background-size: cover;
+    border-radius: 2px;
+}
+.home-section-content-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+.home-section-content-container h1{
+    color: #fff;
+    margin-bottom: 40px;
+}
+.home-section-content-container p{
+    color:#fff;
+    font-size: 50px;
+    margin-bottom: 40px;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+.home-section-content-container button{
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: aqua;
+    color: #fff;
+    font-size: 20px;
+    outline: none;
+    cursor: pointer;
+    border: none;
+}
+.home-section-content-container button a{
+    text-decoration: none;
+    color: #fff;
+}
+
