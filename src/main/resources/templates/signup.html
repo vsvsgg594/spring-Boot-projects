@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.thymeLeaf.org" th:replace="base::Layout(~{::section})">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<section>
+	<div class="container">
+		<duv class="row">
+			<div class="col-md-6 offset-md-3">
+				
+				
+				<div class="my-card mt-3">
+					<h1 class="text-center">Register  Here</h1>
+					  <form novalidate action="" th:action="@{/do_register}" method="post" th:object="${user}">
+						
+						<!-- name filed -->
+						 <div class="form-group">
+	                         <label for="name_field">Your Name</label>
+	                         
+	                         <input 
+                               type="text"
+                               class="form-control is-invalid"
+                               th:classappend="${#fields.hasErrors('name')? 'is-invalid':''}"
+                               name="name"
+                               placeholder="Enter your name"
+                               required
+                               th:value="${user.name}"
+                               />
+                               <div class="invalid-feedback" th:each="e:${#fields.errors('name')}" th:text="${e}">
+                                  
+                               </div>
+                               
+	                         
+	                         
+	                      </div>
+	                      <!-- email filed -->
+						 <div class="form-group">
+	                         <label for="emaill">Your Email</label>
+	                         
+                             <input
+                               type="email"
+                               class="form-control"
+                               id="email" 
+                               name="email"
+                               placeholder="Enter your email"
+                               th:value="${user.email}"
+                               required/>
+                               
+	                      </div>
+	                      <!-- passord filed -->
+						 <div class="form-group">
+	                         <label for="password">Your password</label>
+	                         
+                             <input 
+                             type="password"
+                              class="form-control"
+                              name="password"
+                              
+                               placeholder="Enter your passowrd"
+                               required/>
+                               
+	                         
+	                         
+	                      </div>
+	                      <!-- about filed -->
+						 <div class="form-group">
+	                         <label for="about_field">Description</label>
+	                         
+                             <textarea type="text"
+                               rows="5"
+                               name="about"
+                               class="form-control"
+                               id="about_field" 
+                               aria-describedby="emailHelp" 
+                               placeholder="Description"
+                               th:value="${user.about}"
+                               required>
+                               </textarea>
+                         </div>
+                         <div class="form-group form-check text-center">
+							 <input type="checkbox"
+							 name="agreement"
+							 
+							 id="agreemet"/>
+							 <label for="agreement">Accept terms and conditions</label>
+							 
+							 
+						 </div>
+                         
+                         
+                         
+                         <div class="container text-center mt-2">
+							 <button type="submit"class="btn  bg-primary text-white btn-block">submit</button>
+							  <button type="reset" class="btn btn-primary text-white btn-block">Reset</button>
+						 </div>
+						
+					</form>
+					
+				</div>
+			</div>
+		</duv>
+	</div>
+</section>
+</body>
+</html>
